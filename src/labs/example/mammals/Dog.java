@@ -7,11 +7,11 @@ public class Dog extends Mammal{
     }
 
     public void bark(){
-        System.out.println("woof...woof...woof")
+        System.out.println("woof...woof...woof");
     }
 
     public void fetch(){
-        
+
     }
 
 
