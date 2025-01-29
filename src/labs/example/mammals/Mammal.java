@@ -54,4 +54,4 @@ public class Mammal{
 }
 
 //bite, cry, roll, sit, jump 
-//javac src/labs/example/mammals/Mammal.java 
+//javac src/labs/example/mammals/Mammal.java  
