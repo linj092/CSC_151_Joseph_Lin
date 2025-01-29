@@ -11,6 +11,9 @@ public class Mammal{
     protected String furLength;
     protected String name;
 
+    public void Mammal(String name){
+
+    }
 
     public void setName(String name){
         this.name = name;
@@ -52,6 +55,3 @@ public class Mammal{
     System.out.println("The " + this.name + " is jumping...");
     }
 }
-
-//bite, cry, roll, sit, jump 
-//javac src/labs/example/mammals/Mammal.java  
