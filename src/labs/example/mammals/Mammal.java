@@ -10,13 +10,42 @@ public class Mammal{
     protected String bodySize;
     protected String furLength;
     protected String name;
-
+    protected String getMammalDetails;
     public void Mammal(String name){
 
     }
 
     public void setName(String name){
         this.name = name;
+    }
+//allows the user to input a string value for name when called
+    public void sethairColor(String hairColor){
+        this.hairColor = hairColor;
+    }
+//allows the user to input a string value for hair color when called
+    public void seteyeColor(String eyeColor){
+        this.eyeColor = eyeColor;
+    }
+//allows the user to input a string value for eye color when called
+    public void setbodyTemp(String bodyTemp){
+        this.bodyTemp = bodyTemp;
+    }
+//allows the user to input a string value for body temp when called
+    public void settailLength(String tailLength){
+        this.tailLength = tailLength;
+    }
+//allows the user to input a string value for tail length when called
+    public void setbodySize(String bodySize){
+        this.bodySize = bodySize;
+    }
+//allows the user to input a string value for body size when called
+    public void setfurLength(String furLength){
+        this.furLength = furLength;
+    }
+//allows the user to input a string value for fur length when called
+
+    public void getMammalDetails(){
+    System.out.println("Hair Color:" + this.hairColor +  " | Eye Color:" + this.eyeColor + " | Body Temperature:" + this.bodyTemp + " | Tail Length:" + this.tailLength + " | Body Size:" + this.bodySize + " | Fur Length:" + this.furLength);
     }
 
     public void run(){
@@ -47,11 +76,31 @@ public class Mammal{
     System.out.println("The " + this.name + " is crying...");
     }
     
-    public void sit(){
+    public void sit() throws Exception{
     System.out.println("The " + this.name + " is sitting...");
+    Thread.sleep(15000);
+
+    stand();
+
     }
 
     public void jump(){
     System.out.println("The " + this.name + " is jumping...");
     }
+
+    private void stand(){
+    System.out.println("The " + this.name + " is standing and barking");
+    }
+
+    public void walk(String[] args){
+        int South = 3;
+        int East = 4; 
+
+    System.out.println("The " + this.name + " walks " + South + " miles South and " + East + " miles East.");
+
+    int total = (South + East) / 2;
+    }
+
+    
+
 }
