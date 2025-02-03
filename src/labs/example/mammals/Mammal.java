@@ -92,13 +92,17 @@ public class Mammal{
     System.out.println("The " + this.name + " is standing and barking");
     }
 
-    public void walk(String[] args){
+    public void walk(){
         int South = 3;
         int East = 4; 
 
     System.out.println("The " + this.name + " walks " + South + " miles South and " + East + " miles East.");
 
-    int total = (South + East) / 2;
+    double Hypotenuse = Math.sqrt((South * South) + (East * East));
+    double theta = Math.toDegrees(Math.acos(East / Hypotenuse));
+    double thetaFinal = (double)Math.round(theta * 100) / 100;
+    System.out.println("Theta of the longest leg is " + thetaFinal);
+    
     }
 
     

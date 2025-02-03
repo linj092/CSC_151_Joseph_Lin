@@ -27,5 +27,6 @@ public class Main {
        // Dog dog = new Dog();
 
        // dog.bark();
+        mammal.walk();
     }
 }
