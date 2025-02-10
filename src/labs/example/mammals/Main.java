@@ -4,7 +4,7 @@ public class Main {
     //public class named Main <- must be file name, the executeable
     public static void main(String[] args)throws Exception{
         //New public method named main, type static
-        Mammal mammal = new Mammal();
+        Dog mammal = new Dog();
         //creating a new Mammal using the pre-made structure from Mammal.java (yellow Mammal)
         //the value of Mammal is set for the new instance of the new variable mammal
         //It has access to all the public mammal "functions" inside Mammal.java as it copies the structure of it
