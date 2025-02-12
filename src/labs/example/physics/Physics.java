@@ -70,14 +70,14 @@ public void getForce(){
 }
 public void getWork(){
     double workFinal = (this.force * this.displacement);
-    System.out.println(workFinal + " Joules");
+    System.out.println("Work is " + workFinal + " Joules");
 }
 public void getKineticEnergy(){
     double kineticEnergyFinal = (1/2 * this.mass * (this.velocity * this.velocity));
-    System.out.println(kineticEnergyFinal + " Joules");
+    System.out.println("Kinetic energy is " + kineticEnergyFinal + " Joules");
 }
 public void getPotentialEnergy(){
     double potentialEnergyFinal = (this.mass * gravity * this.height);
-    System.out.println(potentialEnergyFinal + " Joules");
+    System.out.println("Potential energy is " + potentialEnergyFinal + " Joules");
 }
 }

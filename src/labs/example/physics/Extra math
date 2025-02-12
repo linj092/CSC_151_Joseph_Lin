@@ -1,0 +1,32 @@
+//THIS IS BINARY CONVERSION PURELY FOR FUN
+
+public void binaryConversion(int primary){
+    //creates a method in which primary is the users input
+    String response = "";
+    //create response that will be printed out carrying the binary numbers
+    int tempprimary = primary;
+    //create temporary primary variable that will be the primary variable but edited in the method
+    int temp;
+
+    if (primary == 0){
+        System.out.println( "0");
+    //if statement created to make sure that the value inserted is not 0
+    }
+    while (tempprimary > 0){
+    //while tempprimary is greater than 0
+        temp = (int)(tempprimary % 2);
+        tempprimary = (tempprimary/2);
+    //temp is tempprimary's remainder after being divided by 2, tempprimary is then divided by two and java automatically rounds it down.
+
+        if (temp == 1){
+        response = response + "1";
+    //if the temp remainder is 1, indicating there is more afterwards, "1" is added onto the binary response
+        }
+        else{ 
+        response = response + "0";
+   //if the temp remainder is 0, indicating there is no remainder thus no necessary to add a 1, "0" is added
+    }}
+//while statement ends when tempprimary is = 0
+    System.out.println ("The binary for " + primary + " is " + response);
+//prints the final result using the final response after the while function ends.
+}
