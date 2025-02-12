@@ -53,27 +53,27 @@ public void setPotentialEnergy(double potentialEnergy){
 }
 public double getDistance(){
     double distanceFinal = (this.velocity * this.time);
-    System.out.println(distanceFinal + " miles");
+    System.out.println("Distance is " + distanceFinal + " miles");
     return distanceFinal;
 }
 public void getVelocity(){
     double velocityFinal = (this.distance / this.time);
-    System.out.println(velocityFinal + " mph");
+    System.out.println("Velocity is " + velocityFinal + " mph");
 }
 public void getMomentum(){
     double momentumFinal = (this.mass * this.time);
-    System.out.println(momentumFinal + " kg m/s");
+    System.out.println("Momentum is " + momentumFinal + " kg m/s");
 }
 public void getForce(){
     double forceFinal = (this.mass * this.acceleration);
-    System.out.println(forceFinal + " kg m/s^2");
+    System.out.println("Force is " + forceFinal + " kg m/s^2");
 }
 public void getWork(){
     double workFinal = (this.force * this.displacement);
     System.out.println("Work is " + workFinal + " Joules");
 }
 public void getKineticEnergy(){
-    double kineticEnergyFinal = (1/2 * this.mass * (this.velocity * this.velocity));
+    double kineticEnergyFinal = (0.5 * this.mass * (this.velocity * this.velocity));
     System.out.println("Kinetic energy is " + kineticEnergyFinal + " Joules");
 }
 public void getPotentialEnergy(){
