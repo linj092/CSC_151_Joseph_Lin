@@ -15,15 +15,29 @@ public class Main {
         physics.setAcceleration(3);
         physics.setDisplacement(2);
         physics.setHeight(8);
-
-
-        physics.getDistance();
+        
+        physics.getTimeFromSunToEarthInHours();
+        double velocitys = physics.getLightSpeedInMPH();
+        double times = physics.getTimeFromSunToEarthInHours();
+        double distance = physics.getDistance(velocitys, times);
         physics.getVelocity();
         physics.getMomentum();
         physics.getForce();
         physics.getWork();
         physics.getKineticEnergy();
         physics.getPotentialEnergy();
+        physics.getLightSpeedInMPH();
+        physics.getTimeFromSunToEarthInHours();
+        double thetaFinal = physics.walk(3, 4);
+        if (thetaFinal <= 37 && thetaFinal >= 36.87){
+            physics.logValidAngleInfo();
+        }
+        else {
+            physics.logInvalidAngleInfo();
+        }
+        if (distance != 92947266.72){
+            physics.logEarthToSunInvalidDistance();
+        }
+        }
+    }   
 
-    }
-}

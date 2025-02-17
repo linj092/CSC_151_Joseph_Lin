@@ -1,5 +1,5 @@
-//THIS IS BINARY CONVERSION PURELY FOR FUN
 
+//THIS IS BINARY CONVERSION PURELY FOR FUN
 public void binaryConversion(int primary){
     //creates a method in which primary is the users input
     String response = "";
@@ -27,6 +27,11 @@ public void binaryConversion(int primary){
    //if the temp remainder is 0, indicating there is no remainder thus no necessary to add a 1, "0" is added
     }}
 //while statement ends when tempprimary is = 0
-    System.out.println ("The binary for " + primary + " is " + response);
+String original = response;
+String reverse = "";
+for (int i = 0; i < response.length(); i++){
+    reverse = original.charAt(i) + reverse;
+}
+    System.out.println ("The binary for " + primary + " is " + reverse);
 //prints the final result using the final response after the while function ends.
 }
