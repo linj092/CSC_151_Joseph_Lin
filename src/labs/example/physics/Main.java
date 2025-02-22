@@ -26,8 +26,7 @@ public class Main {
         physics.getWork();
         physics.getKineticEnergy();
         physics.getPotentialEnergy();
-        physics.getLightSpeedInMPH();
-        physics.getTimeFromSunToEarthInHours();
+
         double thetaFinal = physics.walk(3, 4);
         if (thetaFinal <= 37 && thetaFinal >= 36.87){
             physics.logValidAngleInfo();

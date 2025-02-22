@@ -18,7 +18,7 @@ public class Physics {
    double lightSpeedInMPH;
    double knownDistanceToEarth;
    protected double distanceFinal;
-   double TimeFromSunToEarthInHours;
+   double timeFromSunToEarthInHours;
 
 public void setHeight(double height){
     this.height = height;
@@ -119,11 +119,11 @@ public double getKnownDistanceToEarth(){
 public double getTimeFromSunToEarthInHours(){
     getKnownDistanceToEarth();
     getLightSpeedInMPH();
-    TimeFromSunToEarthInHours = (knownDistanceToEarth / lightSpeedInMPH);
-    return TimeFromSunToEarthInHours;
+    timeFromSunToEarthInHours = (knownDistanceToEarth / lightSpeedInMPH);
+    return timeFromSunToEarthInHours;
 }
 public void logEarthToSunInvalidDistance(){
-    System.out.println("logging the distance " + distanceFinal + " miles per hour. This is not the right distance of light to the Earth from the Sun of 92947266.72 miles");
+    System.out.println("logging the distance " + distanceFinal + " miles per hour. This is not the right distance of 92947266.72 miles in which light travels to the Earth from the Sun");
 }
 
 
