@@ -1,9 +1,6 @@
 
 package labs.example.mammals;
 
-import java.lang.classfile.instruction.ThrowInstruction;
-import labs.example.mammals.Dog;
-
 public class Mammal{
 
     protected String hairColor;
