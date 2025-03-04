@@ -35,3 +35,24 @@ for (int i = 0; i < response.length(); i++){
     System.out.println ("The binary for " + primary + " is " + reverse);
 //prints the final result using the final response after the while function ends.
 }
+
+//selection sort
+public void sortArray(int[] args){
+    int a = args.length;
+//creates an integar equal to the length of the array
+    for (int i = 0; i < a - 1; i++){
+//runs a For statement that creates and integar with the set value of 0, as long as the value is less than the array length within boundary, run the command and increment
+    int max = i;
+//creates an integar min that will be holding the the value i when it is used to swap around
+        for (int f = i + 1; f < args.length; f++){
+//runs a For statement that creates and integar with the set value of 1, as long as the value is less than the array length, run the command and increment
+        if (args[max] < args[f]){
+            max = f;
+        }
+      }
+      int temp = args[max];
+        args[max] = args[i];
+        args[i] = temp;
+    }
+}
+//UNFINISHED

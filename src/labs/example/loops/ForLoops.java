@@ -43,7 +43,7 @@ public class ForLoops {
         System.out.println("");
         for (int loopValue = 0; loopValue <= 12; loopValue++){
             int sum = firstInt * loopValue;
-            System.out.println(sum + " x " + loopValue + " = " + sum);
+            System.out.println(firstInt + " x " + loopValue + " = " + sum);
         }
     }
 }
