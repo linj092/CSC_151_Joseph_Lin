@@ -56,3 +56,30 @@ public void sortArray(int[] args){
     }
 }
 //UNFINISHED
+
+
+//selection sort
+public void sortArray(int[] args){
+    int a = args.length;
+//creates an integar equal to the length of the array
+    for (int i = 0; i < a - 1; i++){
+//runs a For statement that creates and integar with the set value of 0, as long as the value is less than the array length within boundary, run the command and increment
+    int max = i;
+//creates an integar max that will be holding the greatest value
+        for (int f = i + 1; f < args.length; f++){
+//runs a For statement that creates and integar with the set value of i + 1, as long as the value is less than the array length, run the command and increment
+        if (args[max] < args[f]){
+//if the value at the index of max is less than that of the value at index of f
+            max = f;
+//max then becomes f
+        }
+//it keeps sifting through until it reaches the end of the array keeping the maximum value
+      }
+      int temp = args[max];
+//the value is given to the integar temp 
+        args[max] = args[i];
+//the value at the index of i is given to the value at the index of max instead
+        args[i] = temp;
+//the value that temp held which should be the max number is then given to the index of i position
+    }
+}
