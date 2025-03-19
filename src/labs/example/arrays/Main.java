@@ -16,7 +16,7 @@ public class Main {
     ArrayMath.arraySum(firstArrayInput, secondArrayInput, thirdArrayInput);
     ArrayMath.largestSumInArray(myArrayInput);
     int creditCardTest1[] = new int[]{4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-    int creditCardTest2[] = new int[]{5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4,};
+    int creditCardTest2[] = new int[]{4, 0, 1, 2, 8, 8, 8, 8, 8, 8, 8, 8, 1, 8, 8, 1};
     int creditCardTest3[] = new int[]{3, 7, 8, 2, 8, 2, 2, 4, 6, 3, 1, 0, 0, 0, 5};
     ArrayMath.arrayMod10Check(creditCardTest1);
     ArrayMath.arrayMod10Check(creditCardTest2);

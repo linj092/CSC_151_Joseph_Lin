@@ -89,11 +89,11 @@ public class ArrayMathematics {
         }
 //reverses the card number
         for (int i = 0; i < cardNumber.length; i++){
-        if ((i + 1) % 2 == 0){
+        if ((i + 1) % 2 == 1){
             cardSum = cardReverse[i] + cardSum;
 //if at an even position, add the cardnumber directly to the cardsum
         }
-            else if ((i + 1) % 2 == 1){
+            else if ((i + 1) % 2 == 0){
 //if at an odd number
                 temp = cardReverse[i] * 2;
 //temp = cardnumber times 2
@@ -119,6 +119,9 @@ public class ArrayMathematics {
         } else {
             System.out.println("This is not a valid card");
         }
-        System.out.println(cardSum);
+    for (int i = 0; i < cardNumber.length; i++){
+        System.out.print(cardNumber[i]);
+    }
+    System.out.println("");
 }
 }
