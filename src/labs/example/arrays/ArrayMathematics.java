@@ -23,7 +23,7 @@ public class ArrayMathematics {
                 checker++;
             }
         }
-        if (checker++ > 0){
+        if (checker > 0){
             System.out.println("These arrays do not contain the same values");
         } else {
             System.out.print("These arrays contain the same values");
@@ -81,14 +81,21 @@ public class ArrayMathematics {
         int doubleDigitSum = 0;
         int cardSum = 0;
         int cardValidCheck = 0;
+        int cardReverse[] = new int[cardNumber.length];
+        int p = 0;
+        for (int l = cardNumber.length - 1; l + 1 > 0; l--){
+            cardReverse[p] = cardNumber[l];
+            p++;
+        }
+//reverses the card number
         for (int i = 0; i < cardNumber.length; i++){
         if ((i + 1) % 2 == 0){
-            cardSum = cardNumber[i] + cardSum;
+            cardSum = cardReverse[i] + cardSum;
 //if at an even position, add the cardnumber directly to the cardsum
         }
             else if ((i + 1) % 2 == 1){
 //if at an odd number
-                temp = cardNumber[i] * 2;
+                temp = cardReverse[i] * 2;
 //temp = cardnumber times 2
                 if (temp > 9){
 //if the resulting temp is greater than 9
