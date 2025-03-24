@@ -1,6 +1,7 @@
 package labs.example.arrays;
 
 public class ArrayMathematics {
+    
     public void arrayComparison(int[] firstArray, int[] secondArray){
         int length = 0; 
         int checker = 0;
@@ -123,5 +124,13 @@ public class ArrayMathematics {
         System.out.print(cardNumber[i]);
     }
     System.out.println("");
+}
+public void arraytesting(){
+    int[] x = {23, 55, 83, 19}; 
+    int[] y = {36, 78, 12, 24}; 
+    x = y; 
+    y = x; 
+    System.out.println(x[1]);
+    System.out.println(y[1]);
 }
 }

@@ -21,5 +21,6 @@ public class Main {
     ArrayMath.arrayMod10Check(creditCardTest1);
     ArrayMath.arrayMod10Check(creditCardTest2);
     ArrayMath.arrayMod10Check(creditCardTest3);
+    ArrayMath.arraytesting();
     }
 }
