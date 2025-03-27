@@ -1,0 +1,27 @@
+
+    private static void openLogFile(){
+        File log_file = new File (ERROR_LOG_FILE);
+        try {
+            BufferedWriter log_file_writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE, true));
+            if (log_file.exists()){
+                BufferedReader br = new BufferedReader(new FileReader(ERROR_LOG_FILE));
+                String line;
+                while((line = br.readLine()) != null){
+              //      String array[] = line.split(" ");
+                //    if (array[2].equals("[ERROR]")){
+                  //      System.out.println(Arrays.toString(array));
+                    //}
+                    String pattern = "\"[ERROR]$";
+                    Pattern errorPattern = Pattern.compile(pattern);
+                    Matcher errorMatch = errorPattern.matcher(line);
+                    boolean matchFound = errorMatch.find();
+                    if (matchFound){
+                       // System.out.println(line);
+                    }
+                } log_file_writer.close();
+            }
+        } catch (IOException e) {
+
+        }
+    }
+

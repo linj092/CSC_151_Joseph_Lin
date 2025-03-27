@@ -1,8 +1,7 @@
 package labs.example.fileOperations;
 
 import java.io.*;
-import java.util.*;
-import java.util.stream.Gatherer;
+
 
 
 public class FileOperator {
@@ -10,27 +9,27 @@ public class FileOperator {
     private static final String FILE_PATH = "C:/CSC_151_Joseph_Lin/src/labs/example/fileOperations/Error_Files_CSC";
     private static final String FILE_NAME = FILE_PATH + "/files/users.csv";
     private static final String ERROR_LOG_FILE = FILE_PATH + "/logs/api_error.log";
+    //creates the path
     
-    public static void main() {
-        //call and open() file method
-        openCSVFile();
-    }
     
-    private static void openCSVFile(){
+    public void openCSVFile(){
         String names[] = new String[3];
         double grades[] = new double[3];
         int i = 0;
         File csv_file = new File(FILE_NAME);
         File log_file = new File(ERROR_LOG_FILE);
+        //creates new variables
       try {
-            BufferedWriter csv_file_writer = new BufferedWriter(new FileWriter(ERROR_LOG_FILE,true));
+
             if(csv_file.exists() && log_file.exists()){
                 BufferedReader br = new BufferedReader(new FileReader(FILE_NAME));
+                //if both files exist read through the user.csv file (opens it)
                 String line = "";
                 int count = 0;
                 String message = "";
                 int p = 0;
                 while((line = br.readLine()) != null){
+                //while the read line is NOT null
                     if(count > 0){
                         int sum = 0;
                         double average = 0.0;
@@ -44,10 +43,11 @@ public class FileOperator {
                         grades[p] = average;
                         p++;
                        }
+                    //used count to skip the headers, the names which are at the 0th position of value is put into another array.
+                    //The grades are converted into integers and summed up and placed into a grades array.
                     count++;
                 }
 
-                csv_file_writer.close();
 
             }
             
