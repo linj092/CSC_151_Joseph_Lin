@@ -26,7 +26,6 @@ public class FileOperator {
                 //if both files exist read through the user.csv file (opens it)
                 String line = "";
                 int count = 0;
-                String message = "";
                 int p = 0;
                 while((line = br.readLine()) != null){
                 //while the read line is NOT null
