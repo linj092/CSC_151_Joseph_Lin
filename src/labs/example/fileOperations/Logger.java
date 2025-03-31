@@ -13,6 +13,7 @@ public class Logger {
         br.close();
         BufferedReader br2 = openErrorLog();
         getMemoryLimitExceededCount(br2);
+        br2.close();
     }
     public static BufferedReader openErrorLog() throws IOException{
         File log_file = new File(ERROR_LOG_FILE);
