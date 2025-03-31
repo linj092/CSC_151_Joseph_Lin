@@ -57,4 +57,19 @@ public class FileOperator {
             System.out.println(names[o] + "'s average grade is " + grades[o]);
         }
     }
+    public void printErrorLog(){
+        File csv_file = new File(FILE_NAME);
+        File log_file = new File(ERROR_LOG_FILE);
+        if (csv_file.exists()){
+            try{
+            BufferedReader reader = new BufferedReader(new FileReader(log_file));
+            String line = " ";
+            while ((line = reader.readLine()) != null){
+                System.out.println(line);
+                }
+            }catch(IOException e){
+
+            }
+    }
+    }
 }
