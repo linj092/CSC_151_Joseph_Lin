@@ -11,6 +11,12 @@ public class FileOperator {
     private static final String ERROR_LOG_FILE = FILE_PATH + "/logs/api_error.log";
     //creates the path
     
+
+    public void main(){
+    openCSVFile();
+    printErrorLog();
+}
+
     
     public void openCSVFile(){
         String names[] = new String[3];
