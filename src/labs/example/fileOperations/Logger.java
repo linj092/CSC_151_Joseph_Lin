@@ -127,7 +127,7 @@ public class Logger {
         ArrayList<Integer> location = new ArrayList<Integer>();
         String line = "";
         int count = 0;
-        int check = 0;
+        int check = 0; 
         try{
             logReader.mark(10000000);
             while ((line = logReader.readLine()) != null){
@@ -141,7 +141,7 @@ public class Logger {
                         if (hold[0].equals(address.get(i))){
                             check++;
                         }
-                    }
+                    } 
                 if (check == 0){
                     address.add(hold[0]);
                 }
