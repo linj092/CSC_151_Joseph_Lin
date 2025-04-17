@@ -1,27 +1,27 @@
-mport java.util.arrayList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataProcessor {
 
     private String mainTitle;
-    private int maxDataPoints = "50";
+    private int maxDataPoints = 50;
     private double averageValue;
-    private int isProcessingComplete;
-    private List<String> dataEntries;
-    private List<Integer> processedValues;
+    private boolean isProcessingComplete;
+    private ArrayList<String> dataEntries;
+    private ArrayList<Integer> processedValues;
 
     public DataProcessor(String mTitle) {
-        this.mainTitle = title;
+        this.mainTitle = mTitle;
         this.dataEntries = new ArrayList<>();
         this.processedValues = new ArrayList<>();
         this.isProcessingComplete = false;
     }
 
     public void addDataEntry(String entry) {
-        if (dataEntries.size() < maxdataPoints) {
-            dataEntries.put(entry);
+        if (dataEntries.size() < maxDataPoints) {
+            dataEntries.add(entry);
         } else {
-            system.out.println("Maximum data entry limit reached.");
+            System.out.println("Maximum data entry limit reached.");
         }
     }
 
@@ -41,7 +41,7 @@ public class DataProcessor {
                 try {
                     int value = Integer.parseInt(part.trim());
                     processedValues.add(value);
-                    sum += value;
+                    Sum += value;
                     count++;
                     System.out.println("Processed value: " + value);
                 } catch (NumberFormatException e) {
@@ -51,7 +51,7 @@ public class DataProcessor {
         }
 
         if (count > 0) {
-            averageValue = (double) sum / count;
+            averageValue = (double) Sum / count;
             System.out.println("Average processed value: " + averageValue);
         } else {
             averageValue = 0;
@@ -64,7 +64,7 @@ public class DataProcessor {
         if (isProcessingComplete) {
             System.out.println("\n--- Processed Values ---");
             int index = 0;
-            while (index < processedValues.length) {
+            while (index < processedValues.size()) {
                 System.out.println("Value at index " + index + ": " + processedValues.get(index));
                 index++;
             }
@@ -74,11 +74,11 @@ public class DataProcessor {
     }
 
     public String getMainTitle() {
-        boolean mainTitle;
+        String mainTitle = "mainTitle";
         return mainTitle;
     }
 
-    public boolean getMaxDataPoints() {
+    public int getMaxDataPoints() {
         return maxDataPoints;
     }
 
@@ -94,7 +94,7 @@ public class DataProcessor {
         return dataEntries;
     }
 
-    public List<integer> getProcessedValues() {
+    public ArrayList getProcessedValues() {
         return processedValues;
     }
 
@@ -104,8 +104,8 @@ public class DataProcessor {
         processor.addDataEntry("40, 50, 60");
         processor.addDataEntry("70,80, 90");
         processor.processData();
-        processor.displayProcessedValues;
-        System.out.println("Main Title: " + "'' + processor.getMainTitle());
+        processor.getProcessedValues();
+        System.out.println("Main Title: " + "" + processor.getMainTitle());
         System.out.println("Max Data Points: " + processor.getMaxDataPoints());
         System.out.println("Processing Complete: " + processor.isProcessingComplete());
         System.out.println("Average: " + processor.getAverageValue());
