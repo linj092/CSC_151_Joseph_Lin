@@ -1,0 +1,34 @@
+{
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "text": "AI works by training algorithms on vast amounts of data to identify patterns and make predictions or decisions. These algorithms, often based on machine learning techniques like neural networks, learn to recognize relationships within the data and then apply that knowledge to new, unseen data to solve problems or perform tasks autonomously. Essentially, AI aims to mimic human intelligence by learning from experience and improving over time.\n"
+                    }
+                ],
+                "role": "model"
+            },
+            "finishReason": "STOP",
+            "avgLogprobs": -0.28120183944702148
+        }
+    ],
+    "usageMetadata": {
+        "promptTokenCount": 8,
+        "candidatesTokenCount": 76,
+        "totalTokenCount": 84,
+        "promptTokensDetails": [
+            {
+                "modality": "TEXT",
+                "tokenCount": 8
+            }
+        ],
+        "candidatesTokensDetails": [
+            {
+                "modality": "TEXT",
+                "tokenCount": 76
+            }
+        ]
+    },
+    "modelVersion": "gemini-2.0-flash"
+}

@@ -19,14 +19,19 @@ public class Logger {
         br2.close();
         BufferedReader br3 = openErrorLog();
         getDiskSpaceErrorsWithIPAddresses(br3);
+        br3.close();
         BufferedReader br4 = openErrorLog("http_access_log");
         getGMToffset(br4);
+        br4.close();
         BufferedReader br5 = openErrorLog("http_access_log");
         getHTTPCodes(br5);
+        br5.close();
         BufferedReader br6 = openErrorLog("http_access_log");
         getResponseSizes(br6);
+        br6.close();
         BufferedReader br7 = openErrorLog("http_access_log");
         groupHTTPMethodsAndEndPoints(br7);
+        br7.close();
     }
 
     public static BufferedReader openErrorLog(){
@@ -60,6 +65,7 @@ public class Logger {
             } else if (value[2].equals("[DEBUG]")){
                 debugCount++;
             }
+
             }
         } catch (IOException e){
                 
@@ -83,7 +89,8 @@ public class Logger {
                     location.add(count);
                 }
                 count++;
-            }} catch (IOException e){
+            }
+} catch (IOException e){
                     
             } for (i = 0; i < endPoints.size(); i++){
                 System.out.println("Memory limits occurred on line " + location.get(i) + " with the endpoint of " + endPoints.get(i));
