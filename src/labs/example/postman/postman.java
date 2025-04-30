@@ -43,6 +43,9 @@ public class postman {
         //grabs gemini's response from client that sends a request using user input
         String responseGemini = geminiResponseText(geminiPayloadRequest.body());
         System.out.println("Gemini: " + responseGemini);
+        if (geminiPayloadRequest.statusCode() == 503){
+            System.out.println("Gemini is currently overloaded, please try again later.");
+        }
         //System.out.println("Response code: " + geminiPayloadRequest.statusCode());
         //System.out.println("Raw response: " + geminiPayloadRequest);
         //System.out.println("Response: " + geminiPayloadRequest.body());
@@ -74,7 +77,7 @@ public class postman {
         int indexBegin = response.indexOf(starter);
         if (indexBegin == -1) {return "No response";}
         indexBegin += starter.length();
-        int ending = response.indexOf("\"", indexBegin);
+        int ending = response.indexOf("\\n", indexBegin);
         if (ending == -1) {return "No response";}
         responseReturn = response.substring(indexBegin, ending).replace("\\n", "\n");
         return responseReturn;
