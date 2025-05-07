@@ -69,6 +69,7 @@ public class postman {
         responseReturn = response.substring(indexBegin, ending).replace("\\n", "\n");
         return responseReturn;
     }
+//grabs the response removing the text and \n
     public String textReplace(String text){
         return text.replace("\\", "\\\\").replace("\"", "\\\"");
     }
