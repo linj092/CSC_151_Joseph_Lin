@@ -55,20 +55,7 @@ public class postman {
         }
     }
     public String postForGemini(String requesting){ 
-        return """
-            {
-              "contents": [
-                {
-                  "parts": [
-                    {
-                      "text": "%s"
-                    }
-                  ]
-                }
-              ]
-            }
-            """.formatted(requesting)
-;
+        return "{\"contents\": [{\"parts\": [{\"text\": \"" + requesting +"\"}]}]}";
     //requestbody following gemini's documentations
     }
     public String geminiResponseText(String response){
